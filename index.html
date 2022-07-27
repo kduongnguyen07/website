@@ -1,0 +1,131 @@
+<html><head>
+ 
+  <title>Dương Nguyên Khánh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <script src="jquery-2.1.4.js"></script>
+  <link type="text/css" rel="stylesheet" href="./style.css">
+ </head> 
+<body>
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div> 
+<style>
+  /* Center the loader */
+  #loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+  #myDiv {
+    display: none;
+    }
+  </style>
+  </head>
+  <body onload="myFunction()" style="margin:0;">
+  
+  <div id="loader"></div>
+  
+<div style="display:none;" id="myDiv" class="animate-bottom">
+<!--nut chinh dark light mode -->
+  <div class="toggle">
+<input type="checkbox" id="toggle" />
+<label for="toggle"></label>
+<script>const toggle = document.getElementById('toggle');
+const body = document.body;
+toggle.addEventListener('input', (e) => {
+const isChecked = e.target.checked;
+if(isChecked) {
+  body.classList.add('dark-theme');
+} else {
+  body.classList.remove('dark-theme');
+}
+});</script>
+</div>
+<!--chinh avatar -->
+<div id="avatar">
+<img src="avatar.svg"
+</img>
+</div>
+<!-- ten nguoi dung-->
+<div id="username">
+    <h1>Dương Nguyên Khánh</h1><!--tên -->
+    <h2>Ngày tháng năm sinh:15/08/2007</h2>
+    <p>Sở thích:Viết quote nghệ nghệ nhưng mà không biết viết gì 🤣</p>
+</div>
+<!-- icon logo mang xa hoi-->
+<div class="icon" style="display:flex;flex-direction:row">
+      <a href ="https://discord.gg/sKcEjvak" ><img id="discord" alt="Discord Server" src="https://cdn.discordapp.com/attachments/882626041280094268/995976884074582036/unknown.png" class = "center"></a>
+      <a href ="https://facebook.com/kduongnguyen07" ><img id="facebook" alt="Facebook" src="https://cdn.discordapp.com/attachments/882626041280094268/995975451040292905/unknown.png" class ="center"></a>
+      <a href ="https://www.youtube.com/channel/UC9Rn1W53ZoZx-wxy74Hflqw" ><img id="youtube" alt="Youtube" src="https://cdn.discordapp.com/attachments/745554137315278869/995977302712266782/unknown.png" class="center"></a>
+      <a href="https://github.com/kduongnguyen07" ><image id="github" alt="Github" src="https://cdn.discordapp.com/attachments/745554137315278869/994770239994736710/unknown.png" class="center"></a>
+      <a href="https://www.instagram.com/elninodnk7829/" ><image id="instagram" alt="Instagram" src="https://cdn.discordapp.com/attachments/745554137315278869/994775277387395152/unknown.png" class="center"></a>
+</div>
+<!--Box hacker-->  
+<div id="rectangle1"    
+<div class="css-typing">
+  <p>
+    Hello.I'm Khanh the coder of this website
+  </p>
+  <p>
+    I'm still a student
+  </p>
+  <p>
+    This is my first website if there is any bug please report by sending message into my facebook account
+  </p>
+</div>
+<!--lệnh xóa màn hình preloaders-->
+<script>
+  var myVar;
+  function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+  }
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+  </script>
+  
+</body>
+</html>
