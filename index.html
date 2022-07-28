@@ -1,131 +1,179 @@
-<html><head>
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <title>Dương Nguyên Khánh</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  <script src="jquery-2.1.4.js"></script>
-  <link type="text/css" rel="stylesheet" href="./style.css">
- </head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- linking css file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+</head>
+
 <body>
-  <div class="loader">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div> 
-<style>
-  /* Center the loader */
-  #loader {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 120px;
-    height: 120px;
-    margin: -76px 0 0 -76px;
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-  }
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  /* Add animation to "page content" */
-  .animate-bottom {
-    position: relative;
-    -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 1s;
-    animation-name: animatebottom;
-    animation-duration: 1s
-  }
-  
-  @-webkit-keyframes animatebottom {
-    from { bottom:-100px; opacity:0 } 
-    to { bottom:0px; opacity:1 }
-  }
-  
-  @keyframes animatebottom { 
-    from{ bottom:-100px; opacity:0 } 
-    to{ bottom:0; opacity:1 }
-  }
-  
-  #myDiv {
-    display: none;
-    }
-  </style>
-  </head>
-  <body onload="myFunction()" style="margin:0;">
-  
-  <div id="loader"></div>
-  
-<div style="display:none;" id="myDiv" class="animate-bottom">
-<!--nut chinh dark light mode -->
-  <div class="toggle">
-<input type="checkbox" id="toggle" />
-<label for="toggle"></label>
-<script>const toggle = document.getElementById('toggle');
-const body = document.body;
-toggle.addEventListener('input', (e) => {
-const isChecked = e.target.checked;
-if(isChecked) {
-  body.classList.add('dark-theme');
-} else {
-  body.classList.remove('dark-theme');
-}
-});</script>
-</div>
-<!--chinh avatar -->
-<div id="avatar">
-<img src="avatar.svg"
-</img>
-</div>
-<!-- ten nguoi dung-->
-<div id="username">
-    <h1>Dương Nguyên Khánh</h1><!--tên -->
-    <h2>Ngày tháng năm sinh:15/08/2007</h2>
-    <p>Sở thích:Viết quote nghệ nghệ nhưng mà không biết viết gì 🤣</p>
-</div>
-<!-- icon logo mang xa hoi-->
-<div class="icon" style="display:flex;flex-direction:row">
-      <a href ="https://discord.gg/sKcEjvak" ><img id="discord" alt="Discord Server" src="https://cdn.discordapp.com/attachments/882626041280094268/995976884074582036/unknown.png" class = "center"></a>
-      <a href ="https://facebook.com/kduongnguyen07" ><img id="facebook" alt="Facebook" src="https://cdn.discordapp.com/attachments/882626041280094268/995975451040292905/unknown.png" class ="center"></a>
-      <a href ="https://www.youtube.com/channel/UC9Rn1W53ZoZx-wxy74Hflqw" ><img id="youtube" alt="Youtube" src="https://cdn.discordapp.com/attachments/745554137315278869/995977302712266782/unknown.png" class="center"></a>
-      <a href="https://github.com/kduongnguyen07" ><image id="github" alt="Github" src="https://cdn.discordapp.com/attachments/745554137315278869/994770239994736710/unknown.png" class="center"></a>
-      <a href="https://www.instagram.com/elninodnk7829/" ><image id="instagram" alt="Instagram" src="https://cdn.discordapp.com/attachments/745554137315278869/994775277387395152/unknown.png" class="center"></a>
-</div>
-<!--Box hacker-->  
-<div id="rectangle1"    
-<div class="css-typing">
-  <p>
-    Hello.I'm Khanh the coder of this website
-  </p>
-  <p>
-    I'm still a student
-  </p>
-  <p>
-    This is my first website if there is any bug please report by sending message into my facebook account
-  </p>
-</div>
-<!--lệnh xóa màn hình preloaders-->
-<script>
-  var myVar;
-  function myFunction() {
-    myVar = setTimeout(showPage, 3000);
-  }
-  function showPage() {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("myDiv").style.display = "block";
-  }
-  </script>
-  
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
+        <div class="container">
+            <a class="navbar-brand" href="#">Khánh</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Thông tin cá nhân</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Mạng xã hội</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <!-- main banner -->
+    <section class="bgimage" id="home">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                <h2 class="hero_title">Xin chào ,tôi là Khánh</h2>
+                <p class="hero_desc">Chào mừng đến với trang web của tôi</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section-->
+    <section id="about">
+        <div class="container mt-4 pt-4">
+            <h1 class="text-center">Thông tin về tôi</h1>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <img src="https://cdn.discordapp.com/attachments/882626041280094268/995858423247798342/IMG_6020.jpg" class= "imageAboutPage" alt="">
+                </div>
+                <div class="col-lg-8">
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Họ và tên : Dương Nguyên Khánh</li>
+                                <li>Ngày sinh : 15/08/2007</li>
+                                <li>Nghề nghiệp hiện tại : Học sinh</li>
+                                <li>Sở thích : Vọc vạch máy tính🖥️ ,chơi game🎮</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <p> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- portfolio section-->
+    <section id="portfolio">
+        <div class="container mt-3">
+            <h1 class="text-center">Mạng xã hội</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://cdn.discordapp.com/attachments/882626041280094268/995976094429761536/unknown.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Discord Server</h4>
+                            <p class="card-text">Chém gió ,vui vẻ ,chơi game</p>
+                            <div class="text-center">
+                                <a href="https://discord.gg/hh9JtZeX" class="btn btn-success">Tham gia</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="https://cdn.discordapp.com/attachments/882626041280094268/1002043041600782446/unknown.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Github</h4>
+                            <p class="card-text">Xem những source code của trang web</p>
+                            <div class="text-center">
+                                <a href="https://github.com/kduongnguyen07" class="btn btn-success">Xem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="https://cdn.discordapp.com/attachments/882626041280094268/1002039646630465596/unknown.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Facebook</h4>
+                            <p class="card-text">Tài khoản Facebook cá nhân</p>
+                            <div class="text-center">
+                                <a href="https://facebook.com/kduongnguyen07" class="btn btn-success">Xem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="https://cdn.discordapp.com/attachments/882626041280094268/1002043484489908224/unknown.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Youtube</h4>
+                            <p class="card-text">Một kênh Youtube xàm xí</p>
+                            <div class="text-center">
+                                <a href="https://www.youtube.com/channel/UC9Rn1W53ZoZx-wxy74Hflqw" class="btn btn-success">Xem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="https://cdn.discordapp.com/attachments/882626041280094268/1002044501348601996/unknown.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Twitter</h4>
+                            <p class="card-text">Tôi không phải chính trị gia đâu mà dùng Twitter</p>
+                            <div class="text-center">
+                                <a href="https://twitter.com/dawnelnino" class="btn btn-success">Xem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="https://cdn.discordapp.com/attachments/882626041280094268/1002043910257913916/unknown.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Instagram</h4>
+                            <p class="card-text">Ở đây không có gì</p>
+                            <div class="text-center">
+                                <a href="https://www.instagram.com/elninodnk7829/" class="btn btn-success">Xem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- footer section-->
+    <footer id="footer">
+        <div class="container-fluid">
+            <!-- social media icons -->
+            <div class="social-icons mt-4">
+                <a>© Copyright 2022 by Dương Nguyên Khánh.</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- load javascript after loading all html content -->
+    <script src="script/script.js"></script>
+
 </body>
+
 </html>
