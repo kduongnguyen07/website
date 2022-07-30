@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta property="og:title" content="Personal Portfolio" />
+    <meta property="og:description" content="Web của Dương Nguyên Khánh" />
+    <meta property="og:image" content="https://media.discordapp.net/attachments/745554137315278869/1002501834960810025/android-chrome-192x192.png" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <title>Chỉnh sửa ảnh cơ bản</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container disable">
+        <h2>Trình sửa ảnh cơ bản</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">Màng lọc</label>
+                    <div class="options">
+                        <button id="brightness" class="active">Độ sáng</button>
+                        <button id="saturation">Độ bão hòa</button>
+                        <button id="inversion">Độ nghịch đảo</button>
+                        <button id="grayscale">Độ xám</button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Độ sáng</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title">Xoay chiều và lật ảnh</label>
+                    <div class="options">
+                        <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                        <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-img">
+                <img src="https://cdn.discordapp.com/attachments/937172568773902366/1002788084850634772/unknown.png" alt="preview-img">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">Xóa màng lọc ảnh</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-img">Chọn hình ảnh từ máy bạn</button>
+                <button class="save-img">Lưu ảnh</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+  </body>
+</html>
