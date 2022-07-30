@@ -53,10 +53,10 @@
     text-align: center;
 }
 .card:hover .servicesIcon {
-    color: #008000;
+    color: #26d7e4;
 }
 .servicesText:hover {
-    border: 1px solid #008000;
+    border: 1px solid #06c5df;
 }
 
 /* social media icons styling */

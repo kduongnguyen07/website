@@ -20,7 +20,7 @@ locationBtn.addEventListener("click", () =>{
     if(navigator.geolocation){ // if browser support geolocation api
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }else{
-        alert("Your browser not support geolocation api");
+        alert("Trình duyệt của bạn không hỗ trợ xem bằng vị trí hiện tại");
     }
 });
 
