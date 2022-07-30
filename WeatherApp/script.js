@@ -42,12 +42,12 @@ function onError(error){
 }
 
 function fetchData(){
-    infoTxt.innerText = "Getting weather details...";
+    infoTxt.innerText = "Đang thu thập dữ liệu thời tiết...";
     infoTxt.classList.add("pending");
     // getting api response and returning it with parsing into js obj and in another 
     // then function calling weatherDetails function with passing api result as an argument
     fetch(api).then(res => res.json()).then(result => weatherDetails(result)).catch(() =>{
-        infoTxt.innerText = "Something went wrong";
+        infoTxt.innerText = "Có lỗi đã xảy ra";
         infoTxt.classList.replace("pending", "error");
     });
 }
@@ -55,7 +55,7 @@ function fetchData(){
 function weatherDetails(info){
     if(info.cod == "404"){ // if user entered city name isn't valid
         infoTxt.classList.replace("pending", "error");
-        infoTxt.innerText = `${inputField.value} isn't a valid city name`;
+        infoTxt.innerText = `${inputField.value} không phải là tên 1 thành phố `;
     }else{
         //getting required properties value from the whole weather information
         const city = info.name;
