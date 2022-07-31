@@ -17,6 +17,22 @@
   <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <audio src="https://res.cloudinary.com/khanhdn-tk/video/upload/v1659251855/Kiss_The_Rain_kalimba_cover_lsspq2.mp3"></audio>
+    <!--Test thêm nhạc-->
+    <audio controls id="music">
+        Trình duyệt của bạn không hỗ trợ bật nhạc.<!--Nếu trình duyệt ko hỗ trợ nhạc-->
+        </audio>
+        <button onclick="play()" type="button">Play </button>
+        <button onclick="pause()" type="button">Pause</button>
+        <script>
+        var myMusic= document.getElementById("music");
+        function play() {
+        myMusic.play();
+        }
+        function pause() {
+        myMusic.pause();
+        }
+        </script>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
         <div class="container">
