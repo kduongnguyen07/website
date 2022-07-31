@@ -83,7 +83,7 @@ li{
 audio {
   display: none;
 }
-button {
+button .music {
     font-size: 16px;
     color: #eee;
     position: absolute;
