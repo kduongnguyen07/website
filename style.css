@@ -86,7 +86,7 @@ audio {
 button {
     font-size: 16px;
     color: #eee;
-    position:relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -102,7 +102,7 @@ button {
     transition: all 0.4s ease-out;
   }
   button.navbar-toggler-icon{
-    position:absolute;
+    position: relative;
   }
   button.fade:hover {
     opacity: 1.0;
