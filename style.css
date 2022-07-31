@@ -83,7 +83,7 @@ li{
 audio {
   display: none;
 }
-button button{
+button {
     font-size: 16px;
     color: #eee;
     position: absolute;
@@ -100,6 +100,9 @@ button button{
     opacity: 0.8;
     cursor: pointer;
     transition: all 0.4s ease-out;
+  }
+  button.navbar-toggler-icon{
+    position:absolute;
   }
   button.fade:hover {
     opacity: 1.0;
