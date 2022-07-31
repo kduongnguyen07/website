@@ -86,7 +86,7 @@ audio {
 button {
     font-size: 16px;
     color: #eee;
-    position: absolute;
+    position:relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
