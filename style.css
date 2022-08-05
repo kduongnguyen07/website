@@ -10,6 +10,12 @@
     background-size:cover;
     position:relative;
 }
+.more {
+    height:100vh;
+    background: black;
+    background-size:cover;
+    position:relative;
+}
 /* text css above hero image*/
 .hero_title {
     font-size: 4.5rem;
@@ -101,12 +107,16 @@ audio {
     cursor: pointer;
     transition: all 0.4s ease-out;
   }
-  button.fade:hover {
+button.fade:hover {
     opacity: 1.0;
-  }
+  }  
 .fade {
     opacity: 1.0;
     top: 0;
     left: 0;
     transform: translate(0, 0);
   }  
+  a:link { text-decoration: none; }
+  a:visited { text-decoration: none; }
+  a:hover { text-decoration: none; }
+  a:active { text-decoration: none; }
