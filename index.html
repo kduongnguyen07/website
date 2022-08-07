@@ -15,6 +15,47 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function () {
+      jQuery('body').bind('cut copy paste', function (e) {
+        e.preventDefault();
+      });
+      jQuery("body").on("contextmenu",function(e){
+        return false;
+      });
+    });
+    jQuery(document).keydown(function (event) {
+      if (event.keyCode == 123) {
+        return false;
+      }
+      if (event.ctrlKey && event.shiftKey && event.keyCode == 67) {
+        return false;
+      }
+      if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+        return false;
+      }
+    });
+    document.onkeydown = function(e) {
+      if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {
+        return false;
+      } else {
+        return true;
+      }
+    };
+    jQuery(document).keypress("u",function(e) {
+      if(e.ctrlKey) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+    document.body.addEventListener('keydown', event => {
+      if (event.ctrlKey && 'spa'.indexOf(event.key) !== -1) {
+        event.preventDefault()
+      }
+    })
+  </script>
 </head>
 <body>
     <audio src="https://res.cloudinary.com/khanhdn-tk/video/upload/v1659251855/Kiss_The_Rain_kalimba_cover_lsspq2.mp3"></audio>
