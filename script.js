@@ -20,7 +20,14 @@ navLinks.forEach((l) => {
 //testing for website music
 const button = document.querySelector("#button");
 const icon = document.querySelector("#button > i");
-const audio = document.querySelector("audio");
+document.querySelectorAll('audio').forEach(audio => {
+
+  audio.addEventListener('play', () => {
+
+      const currentPlaying = getCurrentlyPlayingAudio();
+      console.log('current playing audio:', currentPlaying);
+  });
+});
 button.addEventListener("click", () => {
   if (audio.paused) {
     audio.volume = 0.2;
