@@ -3,10 +3,10 @@
     background-color: black;
 }
 
-/* hero background image */
+/*background image */
 .bgimage {
     height:100vh;
-    background: url("https://cdn.discordapp.com/attachments/998125907967496203/998232843534749726/IMG_6090.gif");
+    background: url("https://64.media.tumblr.com/2b5f96777491c306267b4cab21575b4d/tumblr_phcq9rpfKz1qze3hdo1_r2_500.gifv");
     background-size:cover;
     position:relative;
 }
