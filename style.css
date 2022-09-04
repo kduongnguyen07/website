@@ -8,7 +8,7 @@ body{
 /*background image */
 .bgimage {
     height:100vh;
-    background: url("https://picsum.photos/1200/800?image=575");
+    background: url("https://picsum.photos/1440/810");
     background-size:cover;
     position:relative;
 }
