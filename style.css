@@ -133,3 +133,7 @@ button.fade:hover {
     font-style: italic;
     font-size: 50px;
   }
+  #avatar img
+    {
+        border-radius: 7px;
+    }
